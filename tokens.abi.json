@@ -1,0 +1,45 @@
+{
+	"ABI version": 2,
+	"version": "2.1",
+	"header": ["time", "expire"],
+	"functions": [
+		{
+			"name": "createToken",
+			"inputs": [
+				{"name":"namec","type":"string"},
+				{"name":"score","type":"uint256"},
+				{"name":"time","type":"uint256"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "setTokenValue",
+			"inputs": [
+				{"name":"TokenId","type":"uint256"},
+				{"name":"value","type":"int256"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "constructor",
+			"inputs": [
+			],
+			"outputs": [
+			]
+		}
+	],
+	"data": [
+	],
+	"events": [
+	],
+	"fields": [
+		{"name":"_pubkey","type":"uint256"},
+		{"name":"_timestamp","type":"uint64"},
+		{"name":"_constructorFlag","type":"bool"},
+		{"components":[{"name":"name","type":"string"},{"name":"score","type":"uint256"},{"name":"time","type":"uint256"}],"name":"tokensArr","type":"tuple[]"},
+		{"name":"tokentoOwner","type":"map(uint256,uint256)"},
+		{"name":"tokenValue","type":"map(uint256,int256)"}
+	]
+}
